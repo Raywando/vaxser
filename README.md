@@ -4,7 +4,7 @@ Extracts `var`'s from endpoints' HTML source and appends it to the urls as a par
 
 # Usage
 
-`cat urls.txt | vaxer.sh`
+`cat urls.txt | vaxser.sh`
 
 # Output
 

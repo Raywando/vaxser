@@ -6,6 +6,10 @@ Extracts `var`'s from endpoints' HTML source and appends it to the urls as a par
 
 `cat urls.txt | vaxer.sh`
 
+# Output
+
+![](https://i.imgur.com/YqbbLQU.png)
+
 # Dependencies 
 
 gf (https://github.com/tomnomnom/gf)

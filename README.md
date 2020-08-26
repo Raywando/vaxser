@@ -5,3 +5,9 @@ Extracts `var`'s from endpoints' HTML source and appends it to the urls as a par
 # Usage
 
 `cat urls.txt | vaxer.sh`
+
+# Dependencis 
+
+gf (https://github.com/tomnomnom/gf)
+concurl (https://github.com/tomnomnom/concurl)
+Gf-Patterns (https://github.com/1ndianl33t/Gf-Patterns)

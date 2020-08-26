@@ -1,18 +1,3 @@
-function logger() {
-        if [[ "$1" == "[+]"* ]]
-        then
-                echo -e "${BLUE}$1${NC}"
-        elif [[ "$1" == "[!]"* ]]
-        then
-                echo -e "${GREEN}$1${NC}"
-        elif [[ "$1" == "[!!]"* ]]
-        then
-                echo -e "${RED}$1${NC}"
-        else
-                echo -e "${PURPLE}$1${NC}"
-        fi
-}
-
 cat - > tmp
 echo "====================== It's gonna be Legen... Wait for it ======================"
 cat tmp | concurl -c 100 -d 10 &>/dev/null

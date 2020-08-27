@@ -2,9 +2,7 @@ cat - > tmp
 echo "====================== It's gonna be Legen... Wait for it ======================"
 cat tmp | concurl -c 100 -d 10 &>/dev/null
 
-#logger "[+] Extracting vars"
 cd out
-#gf jsvar > tmp
 
 for source in $(find -type f)
 do

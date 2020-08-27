@@ -12,8 +12,5 @@ Extracts `var`'s from endpoints' HTML source and appends it to the urls as a par
 
 # Dependencies 
 
-gf (https://github.com/tomnomnom/gf)
-
 concurl (https://github.com/tomnomnom/concurl)
 
-Gf-Patterns (https://github.com/1ndianl33t/Gf-Patterns)
